@@ -1,0 +1,32 @@
+{
+  "name": "dsh-minimal",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "deepseek-harness「极简模式」的独立 TS 包：complete-persona system prompt + 持久 bash + str_replace_editor 双工具。bash/terminal 复用 comrade-harness-lib（单一定义源），零 npm 依赖（持久 shell 走管道而非 PTY）",
+  "files": [
+    "*.ts",
+    "tsconfig.json"
+  ],
+  "exports": {
+    ".": "./index.ts",
+    "./system-prompt": "./system-prompt.ts",
+    "./bash": "./bash.ts",
+    "./str-replace-editor": "./str-replace-editor.ts",
+    "./workspace": "./workspace.ts",
+    "./terminal": "./terminal.ts",
+    "./fs-error": "./fs-error.ts",
+    "./types": "./types.ts"
+  },
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "demo": "bun demo.ts"
+  },
+  "devDependencies": {
+    "typescript": "^5.5.0",
+    "@types/bun": "^1.1.0"
+  },
+  "dependencies": {
+    "comrade-harness-lib": "github:windwhiterain/comrade-harness-lib#5e10249c460d8cac442cfc8043ed3b3bd88e8b4f"
+  }
+}
